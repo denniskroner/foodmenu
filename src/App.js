@@ -14,10 +14,8 @@ class App extends Component {
     axios
       .get("https://www.themealdb.com/api/json/v1/1/categories.php")
       .then((response) => {
-        const foodmenu = response.data.categories.slice(0,1);
+        const foodmenu = response.data.categories;
         this.setState({ foodmenu: foodmenu });
-
-        console.log(foodmenu);
       });
   }
 
